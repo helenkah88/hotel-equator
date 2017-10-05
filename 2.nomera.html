@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="uikit-2.27.4/css/uikit.min.css">
+    <link rel="stylesheet" href="uikit-2.27.4/css/components/datepicker.css">
+    <link rel="stylesheet" href="uikit-2.27.4/css/components/slideshow.css">
+    <link rel="stylesheet" href="uikit-2.27.4/css/components/slidenav.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- jQuery is required -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- UIkit JS -->
+    <script src="uikit-2.27.4/js/uikit.min.js"></script>
+    <script src="uikit-2.27.4/js/core/modal.min.js"></script>
+    <script src="uikit-2.27.4/js/components/datepicker.js"></script>
+    <script src="uikit-2.27.4/js/components/slideshow.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="top-panel">
+        <div class="container">
+            <div class="uk-grid contact-info">
+                <div class="uk-width-medium-1-1 uk-width-large-2-3">
+                    <div class="contacts uk-grid uk-grid-width-medium-1-1 uk-grid-width-large-1-2">
+                        <div class="address"><span><img src="img/location_sign.png" alt=""></span>443110, г. Самара, ул. Ново-Садовая 18</div>
+                        <div class="phone"><span><img src="img/phone_sign.png" alt=""></span>123456788</div>
+                    </div>
+                </div>
+                <div class="uk-width-medium-1-1 uk-width-large-1-3">
+                    <ul class="social">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="container">
+            <div class="uk-grid">
+                <div id="logo" class="uk-width-medium-1-1 uk-width-large-2-6">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="uk-width-medium-1-1 uk-width-large-3-6 nav">
+                    <a href="#my" class="uk-navbar-toggle uk-visible-small"></a>
+                    <nav class="uk-hidden-small">
+                        <div class="uk-navbar">
+                            <div class="uk-navbar-content"><a href="#">Номера и цены</a></div>
+                            <div class="uk-navbar-content"><a href="#">Услуги</a></div>
+                            <ul class="uk-navbar-nav">
+                                <li class="uk-parent uk-active" data-uk-dropdown="">
+                                    <a href="#">Инфорамация</a>
+                                    <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-bottom">
+                                        <ul class="uk-nav uk-nav-navbar">
+                                            <li><a href="#">Условия проживания</a></li>
+                                            <li><a href="#">Акции и специальные предложения</a></li>
+                                            <li><a href="#">Новости</a></li>
+                                            <li><a href="#">Документы</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="uk-navbar-content"><a href="#">Отзывы</a></div>
+                            <div class="uk-navbar-content"><a href="#">Контакты</a></div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="uk-width-medium-1-1 uk-width-large-1-6 uk-vertical-align booking-btn">
+                    <button class="uk-vertical-align-middle">Бронировать</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="booking-form">
+        <div class="container">
+            <h2 class="uk-hidden-medium">Забронируйте номер сейчас!</h2>
+            <form class="uk-form">
+                <div class="uk-grid">
+                    <div class="uk-width-large-1-5 uk-form-stacked">
+                        <label class="uk-form-label" for="">Дата заезда</label>
+                        <div class="uk-form-icon">
+                            <i class="uk-icon-calendar"></i>
+                            <input type="text" data-uk-datepicker="{format:'DD.MM.YYYY'}">
+                        </div>
+                        <p class="uk-form-help-block">5 дней, 4 ночи</p>
+                    </div>
+                    <div class="uk-width-large-1-5 uk-form-stacked">
+                        <label class="uk-form-label" for="">Дата выезда</label>
+                        <div class="uk-form-icon">
+                            <i class="uk-icon-calendar"></i>
+                            <input type="text" data-uk-datepicker="{format:'DD.MM.YYYY'}">
+                        </div>
+                    </div>
+                    <div class="uk-width-large-1-5 uk-form-stacked">
+                        <label class="uk-form-label" for="">Тип номера</label>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+                        <a class="uk-form-help-block">выбрать номер</a>
+                    </div>
+                    <div class="uk-width-large-1-5 uk-form-stacked">
+                        <label class="uk-form-label" for="">Тариф</label>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+                        <a class="uk-form-help-block">узнать больше</a>
+                    </div>
+                    <div class="uk-width-large-1-5 uk-vertical-align">
+                        <button class=" uk-vertical-align-middle">Забронировать</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <section id="prices">
+        <div class="container">
+            <h2>Номера и цены</h2>
+            <div class="uk-grid uk-grid-width-medium-1-3 uk-grid-collapse">
+                <div>
+                    <div class="uk-slidenav-position" data-uk-slideshow>
+                        <ul class="uk-slideshow">
+                            <li>
+                                <img src="img/room_1.jpg" width="" height="" alt="">
+                            </li>
+                            <li>
+                                <img src="img/room_2.jpg" width="" height="" alt="">
+                            </li>
+                        </ul>
+                        <div class="uk-position-bottom-right">
+                            <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
+                            <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
+                        </div>
+                    </div>
+                    <div class="room-info">
+                        <h4>Номер первой категории "Стандарт"</h4>
+                        <p>Комфортный номер для отдыа и проживания. Интерьер в споконых тонах и непривзойденная чистота - вот за что ценят этот номер постояльцы нашего отеля.</p>
+                        <div class="uk-grid-divider"></div>
+                        <span class="amount">1 - 2 человека</span>
+                        <span class="space">16 <sup>м</sup></span>
+                        <div class="uk-grid-divider"></div>
+                        <p class="description">В номере: одна комната / широкая двуспальная кровать / кондиционер / кабельное тв / телефон / душевая кабина с гидромассажем / фен / тапочки / косметические принадлежности / бесплатный wi-fi</p>
+                        <div class="price">Цена за номер: <span>1 гость от 3500 рублей</span>
+                            <span>2 гость от 3750 рублей</span></div>
+                        <button>Забронировать</button>
+                        <a href="#" class="detail">подробнее</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-slidenav-position" data-uk-slideshow>
+                        <ul class="uk-slideshow">
+                            <li>
+                                <img src="img/room_2.jpg" width="" height="" alt="">
+                            </li>
+                            <li>
+                                <img src="img/room_3.jpg" width="" height="" alt="">
+                            </li>
+                        </ul>
+                        <div class="uk-position-bottom-right">
+                            <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
+                            <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
+                        </div>
+                    </div>
+                    <div class="room-info">
+                        <h4>Номер высшей категории "Джуниор сюит"</h4>
+                        <p>Комфортный номер для отдыа и проживания. Интерьер в споконых тонах и непривзойденная чистота - вот за что ценят этот номер постояльцы нашего отеля.</p>
+                        <div class="uk-grid-divider"></div>
+                        <span class="amount">1 - 2 человека</span>
+                        <span class="space">32 <sup>м</sup></span>
+                        <div class="uk-grid-divider"></div>
+                        <p class="description">В номере: две комнаты: спальня и гостиная / широкая двуспальная кровать / кожаный диван-кровать / 2 кондиционера / кабельное тв / телефон / душевая кабина с гидромассажем или ванна / фен / тапочки / косметические принадлежности / бесплатный wi-fi</p>
+                        <div class="price">Цена за номер: <span>1 гость от 3500 рублей</span>
+                            <span>2 гость от 3750 рублей</span></div>
+                        <button>Забронировать</button>
+                        <a href="#" class="detail">подробнее</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-slidenav-position" data-uk-slideshow>
+                        <ul class="uk-slideshow">
+                            <li>
+                                <img src="img/room_3.jpg" width="" height="" alt="">
+                            </li>
+                            <li>
+                                <img src="img/room_2.jpg" width="" height="" alt="">
+                            </li>
+                        </ul>
+                        <div class="uk-position-bottom-right">
+                            <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
+                            <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
+                        </div>
+                    </div>
+                    <div class="room-info">
+                        <h4>Номер высшей категории "Апартамент" Комфортный номер для отдыа </h4>
+                        <p>Комфортный номер для отдыа и проживания. Интерьер в споконых тонах и непривзойденная чистота - вот за что ценят этот номер постояльцы нашего отеля.</p>
+                        <div class="uk-grid-divider"></div>
+                        <span class="amount">1 - 2 человека</span>
+                        <span class="space">46 <sup>м</sup></span>
+                        <div class="uk-grid-divider"></div>
+                        <p class="description">В номере: три комнаты: спальня, гостиная и кухня / широкая двуспальная кровать / кожаный диван-кровать / 2 кондиционера / кабельное ТВ / 2 телевизора / телефон / ванна / фен / халат и тапочки / косметические принадлежности / холодильник / электроплита / электрочайник / посуда / бесплатный wi-fi</p>
+                        <div class="price">Цена за номер: <span>1 гость от 3500 рублей</span>
+                            <span>2 гость от 3750 рублей</span></div>
+                        <button>Забронировать</button>
+                        <a href="#" class="detail">подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="banner">
+        <div class="container" style="position: relative;">
+            <div class="banner-layer">
+                <div class="uk-width-medium-1-1 uk-width-large-1-2">
+                    <h2>Не нашли подходящий номер?</h2>
+                    <div class="uk-grid-divider uk-hidden-small"></div>
+                    <h4>Гостиница Экватор 2 Корпус! <br> Здесь еще больше комфортных номеров!</h4>
+                    <button>посмотреть</button>
+                </div>
+            </div>
+            <img src="img/banner.jpg" alt="" style="width: 100%;">
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="uk-grid">
+                <div class="uk-width-medium-1-1 uk-width-large-4-6 copyright">
+                    <p>&copy; Гостиница Экватор, 2017. Все права защищены.</p>
+                </div>
+                <div class="uk-width-medium-1-1 uk-width-large-2-6 footer-icon">
+                    <img src="img/footer_logo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
