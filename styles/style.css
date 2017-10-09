@@ -21,6 +21,7 @@ body {
     margin: 0;
     padding: 0;
     background: #fff;
+    font-family: 'Lato', sans-serif !important;
 }
 .uk-form input:not([type]):focus, .uk-form input[type=text]:focus, .uk-form input[type=password]:focus, .uk-form input[type=email]:focus, .uk-form input[type=url]:focus, .uk-form input[type=search]:focus, .uk-form input[type=tel]:focus, .uk-form input[type=number]:focus, .uk-form input[type=datetime]:focus, .uk-form input[type=datetime-local]:focus, .uk-form input[type=date]:focus, .uk-form input[type=month]:focus, .uk-form input[type=time]:focus, .uk-form input[type=week]:focus, .uk-form input[type=color]:focus, .uk-form select:focus, .uk-form textarea:focus {
     background: #fff;
@@ -36,10 +37,19 @@ ul {
     list-style: none;
 }
 
+.uk-breadcrumb {
+    margin: 0;
+    padding: 20px 0;
+}
+.block-grey {
+    background: #f2f2f2 !important;
+}
+
 .container {
-    max-width: 1160px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 20px;
     font-family: 'Lato', sans-serif !important;
 }
 
@@ -120,13 +130,14 @@ ul {
     border-width: 2px;
     border-bottom-color: #ddd;
     border-right-color: #ddd;
-    background: #f2f2f2;
+    
 }
 header {
     position: relative;
     z-index: 99999;
     background: #fff;
-    padding: 25px 10px;
+    padding: 22px 10px;
+    border: 1px solid #e7e7e7;
 }
 .uk-navbar-content > a {
     color: #212121 !important;
@@ -143,19 +154,20 @@ header {
 }
 #logo {
     text-align: center;
+    padding-left: 0;
 }
 .uk-navbar-toggle {
     color: #4e1301 !important;
 }
 
-#top-panel {
+.top-panel {
     padding: 19px 10px;
 }
-#top-panel,
+.top-panel,
 footer .container {
     background-color:  #4e1301;
 }
-#top-panel .contacts {
+.top-panel .contacts {
     color:  #f2f2f2;
     font-size: 16px;
     font-weight: 400;
@@ -206,7 +218,7 @@ ul.social li:nth-child(4) a {
     background-position: -148px top;
 }
 
-button {
+.button {
     border: 1px solid #dc4747;
     background-color: #ff5252;
     width: 170px;
@@ -229,7 +241,7 @@ header .nav {
 }
 nav .uk-dropdown-navbar {
     background: #ff5252;
-    margin-top: 39px;
+    margin-top: 38px;
 }
 .uk-nav-navbar>li>a {
     color: #fff;
@@ -260,6 +272,7 @@ nav .uk-dropdown-navbar {
 .slider h4,
 .slider h2 {
     text-transform: uppercase;
+    line-height: 1.2em;
 }
 .slider .rates {
     padding: 0;
@@ -302,11 +315,12 @@ nav .uk-dropdown-navbar {
     max-width: 160px;
     width: 100%;
 }
-.booking-form button {
+.booking-form .button {
     background: transparent;
     border: 1px solid #fff;
 }
 .booking-form .container {
+    max-width: 1160px;
     box-sizing: border-box;
     padding: 20px 60px;
     border: 1px solid #dc4747;
@@ -315,80 +329,176 @@ nav .uk-dropdown-navbar {
     background: -o-linear-gradient(90deg, #ff5252 0%, #dc4747 100%);
     background: -ms-linear-gradient(90deg, #ff5252 0%, #dc4747 100%);
     background: linear-gradient(0deg, #ff5252 0%, #dc4747 100%);
-    /*height: 222px;*/
 }
 
-#about .inner {
+.checkin-time {
+    padding: 20px 0;
+}
+.checkin-time ul {
+    padding: 0;
+}
+.checkin-time ul li {
+    margin: 15px 0;
+}
+.checkin-time h2 {
+    text-transform: uppercase;
+}
+.checkin-time .block-right {
+    margin: 50px 0;
+    background: #fff;
+}
+.checkin-time .block-right h4 {
+    text-transform: uppercase;
+    color: #ff5252;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.checkin-time .block-right .calendar,
+.checkin-time .block-right .arrow-left,
+.checkin-time .block-right .arrow-right {
+    float: left;
+    width: 40px;
+    height: 44px;
+    background: url('../img/terms-sprite.png') no-repeat 0 center;
+}
+.checkin-time .block-right .arrow-left {
+    background-position: -40px center;
+    margin-right: 5px;
+}
+.checkin-time .block-right .arrow-right {
+    background-position: -80px center;
+    margin-right: 5px;
+}
+.checkin-time .block-left {
+    float: right;
+    width: 80%;
+    padding-right: 20px;
+}
+.inner ul {
+    padding: 0;
+}
+.inner ul h6 {
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.inner .circle-list li {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.inner .circle-list .circle {
+    float: left;
+    padding: 4px 9px;
+    border-radius: 50%;
+    border: 5px solid #dccdc9;
+    color: #663e34;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.block-offset .inner {
     margin-left: -130px;
 }
-#about .inner .img {
+.block-offset .inner .img {
     background: url('../img/about.jpg') no-repeat center;
     background-size: cover;
     background-position: center;
 }
-#about .inner .text-layer {
+.block-offset.terms .img {
+    background: url('../img/terms.jpg') no-repeat center;
+    background-size: cover;
+    background-position: center;
+}
+.block-offset.promotion .inner .img {
+    background: url('../img/promotion-small.jpg') no-repeat center;
+    background-size: cover;
+    background-position: center;
+}
+.block-offset.terms .inner {
+    padding-bottom: 20px;
+}
+.block-offset.promotion .inner .text-layer {
+    padding: 20px 30px;
+}
+.block-offset .inner .text-layer {
     padding: 60px 30px;
 }
-#about h4 {
+.block-offset h4 {
+    margin-bottom: 0;
     color:  #666;
     font-size: 20px;
     text-transform: uppercase;
 }
-#about h2 {
+.block-offset h2 {
+    margin-top: 5px;
     color:  #1b1b1b;
     font-size: 36px;
     text-transform: uppercase;
+    line-height: 1.3em;
 }
-#about .uk-grid-divider {
+.block-offset h3 {
+    text-transform: uppercase;
+    margin-top: 0;
+}
+.block-offset .thumb-block h2 {
+    font-size: 30px;
+}
+.block-offset .uk-grid-divider {
     width: 25%;
 }
-#about p {
+.block-offset p,
+.block-offset .thumb-block h4 {
     color:  #1b1b1b;
     font-size: 16px;
     line-height: 24px;
 }
-
-.services {
-    background-color:  #f2f2f2;
-    text-align: center;
-    padding: 50px 0;
+.block-offset .thumb-block h4 {
+    text-transform: uppercase;
+    margin-top: 20px;
 }
-.services .thumb {
+.block-offset .thumb-block {
+    text-align: center;
+    padding: 20px 0;
+}
+.thumb-block .thumb {
     padding: 0 20px;
     margin: 10px 0;
 }
 
-#prices {
+.room-prices {
     background-color:  #d7ccc8;
     padding: 30px 0;
 }
-#prices .container {
+.room-prices .container {
     border: 1px solid #999;
     background-color:  #fff;
     padding: 20px;
     padding-bottom: 10px;
     box-sizing: border-box;
 }
-#prices h2 {
+.room-prices h2 {
     color:  #212121;
     font-size: 30px;
     text-transform: uppercase;
 }
-#prices h4,
-#prices p {
+.room-prices h4,
+.room-prices p,
+.price-details h4,
+.price-details p {
     color:  #212121;
     font-size: 16px;
-    line-height: 24px;
 }
-#prices h4 {
+.room-prices h4 {
     font-weight: bold;
     text-transform: uppercase;
 }
-#prices .description {
+.room-prices .description,
+.price-details .description {
     color:  #757575;
     font-size: 14px;
 }
-#prices a.detail {
+.room-prices a.detail {
     display: block;
     float: right;
     margin-top: 7px;
@@ -397,53 +507,83 @@ nav .uk-dropdown-navbar {
     font-size: 16px;
     text-decoration: underline;
 }
-#prices .room-info {
+.room-info {
     padding-right: 30px;
     margin: 25px 0;
 }
-#prices .room-info .price {
+.room-info .price {
     margin-bottom: 20px;
 }
-#prices .room-info .price span {
+.room-info .price span {
     padding-left: 10px;
+    line-height: inherit;
+    height: auto;
 }
-#prices .room-info .price span:last-child {
+.room-info .price span:last-child {
     display: block;
     margin-left: 100px;
 }
-#prices .room-info span {
+.room-info span {
     display: inline-block;
     height: 25px;
     line-height: 25px;
     padding-left: 30px;
 }
-#prices .room-info .amount {
+.room-info .amount {
     background: url('../img/people.png') no-repeat left center;
     margin-right: 25px;
 }
-#prices .room-info .space {
+.room-info .space {
     background: url('../img/resize.png') no-repeat left center;
 }
-#prices .uk-slidenav-position .uk-slidenav {
+.uk-slidenav-position .slidenav-square .uk-slidenav {
     display: block;
     margin-top: -60px;
     font-size: 45px;
 }
-#prices .uk-slidenav-position .uk-slidenav-next {
+.uk-slidenav-position .slidenav-square .uk-slidenav-next {
     right: 0px;
     background-color: #ff5252;
 }
-#prices .uk-slidenav-position .uk-slidenav-previous {
+.uk-slidenav-position .slidenav-square .uk-slidenav-previous {
     left: -120px;
     background-color:  #4e1301;
 }
-.uk-slidenav-contrast {
+.slidenav-square .uk-slidenav-contrast {
     color: rgba(255,255,255,.7);
 }
-#prices .uk-grid>* {
+.room-prices .uk-grid>* {
     padding-left: 0 !important;
 }
 
+.price-details.odd {
+    padding-top: 50px;
+}
+.price-details {
+    padding: 20px;
+    border: none;
+}
+.price-details .room-info {
+    padding: 20px;
+    margin: 0;
+}
+.price-details h4 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: normal;
+}
+.price-details h4 > span {
+    font-size: 36px;
+    padding-left: 0;
+    line-height: 1.3em;
+}
+.room-prices .uk-grid-divider,
+.price-details .uk-grid-divider {
+    margin: 20px 0;
+}
+.banner {
+    padding: 0;
+}
 .banner h2,
 .banner h4 {
     color:  #4e1301;
@@ -469,38 +609,86 @@ nav .uk-dropdown-navbar {
     width: 30%;
 }
 
-#paid-services {
-    margin: 20px 0;
+.tile-block {
+    padding: 20px 0;
 }
-#paid-services h4,
-#paid-services h2 {
+.tile-block h4,
+.tile-block h2 {
     text-transform: uppercase;
 }
-#paid-services h4 {
+.tile-block h4 {
+    margin-bottom: 0;
     color:  #666;
     font-size: 20px;
 }
-#paid-services h2 {
+.tile-block h2 {
     font-size: 24px;
+    margin-top: 5px;
 }
-#paid-services p {
+.tile-block p {
     color:  #1b1b1b;
     font-size: 16px;
 }
-#paid-services .uk-grid-collapse {
+.tile-block .uk-grid-collapse {
     margin-left: -35px;
 }
-#paid-services .tile {
+.tile-block .tile {
     position: relative;
 }
-#paid-services .tile >  img {
+.tile-block .tile >  img {
     display: block;
     width: 100%;
     height: 100%;
 }
-#paid-services .info {
+.tile-block .info {
     width: 58%;
     padding-right: 20px;
+}
+.price-label {
+    border: 1px solid #dc4747;
+    background-color:  #ff5252;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+}
+.tile-wrapper h4 {
+    color: #fff;
+}
+.panel-block .price-label {
+    line-height: 102px;
+    height: 102px;
+}
+.tile-wrapper .price-label {
+    position: absolute;
+    top: 0px;
+    right: 1px;
+    padding: 20px 10px;
+}
+.price-label span {
+    font-size: 24px;
+}
+.tile-block .text-block {
+    text-align: center;
+    padding: 0 20px;
+}
+.info-text h4 {
+    margin-top: 5px;
+}
+.tile-block .tile-wrapper .tile {
+    max-width: 100% !important;
+}
+.tile-block .tile-wrapper h5 {
+    color: #fff;
+}
+.tile-block .tile-wrapper .tile-inner.text p {
+    color: #fff !important;
+}
+.tile-block .tile-wrapper .uk-grid-divider {
+    border-color: #fff !important;
+}
+.tile-block .tile-wrapper .tile.cafe {
+    background: #4e1301;
+    height: 100%;
 }
 .tiles {
     width: 40%;
@@ -513,7 +701,7 @@ nav .uk-dropdown-navbar {
     text-align: center;
 }
 .tile .tile-inner h5 {
-    color: #fff;
+    color: #fff !important;
     text-transform: uppercase;
     font-size: 16px;
     margin: 0;
@@ -530,176 +718,260 @@ nav .uk-dropdown-navbar {
     color: #4e1301 !important;
     margin-bottom: 0;
 }
-.tile.tile-2 {
+.tile.cafe {
     background-color:  #d7ccc8;
 }
-.tile.tile-2 h5 {
+.tile.cafe h5 {
     color: #5d4037;
 }
-.tile.tile-2 .tile-inner .uk-grid-divider {
+.tile.cafe .tile-inner .uk-grid-divider {
     border-color: #442f28;
 }
-.tile.tile-3 {
-    background-color:  #f2f2f2;
+
+.promotion-price {
+    padding: 20px 0;
 }
-
-
-#promotion {
+.panel-block {
     margin-bottom: 30px;
     background: url('../img/promotion.jpg') no-repeat center;
     background-size: cover;
     padding: 170px 0 180px;
 }
-#promotion .container {
+.panel-block .container {
     padding: 0 97px;
 }
-#promotion .panel h2,
-#promotion .panel h5 {
+.panel-block .panel h2,
+.panel-block .panel h5 {
     margin: 0;
     text-transform: uppercase;
 }
-#promotion .panel h5 {
+.panel-block .panel h5 {
     color:  #666;
     font-size: 16px;
 }
-#promotion .panel h2 {
+.panel-block .panel h2 {
     color:  #666;
     font-size: 20px;
 }
-#promotion .panel p {
+.panel-block .panel p {
     max-height: 60px;
     overflow: hidden;
 }
-#promotion .panel p,
-#promotion .panel a {
+.panel-block .panel p,
+.panel-block .panel a {
     color:  #303030;
     font-size: 16px;
 }
-#promotion .panel a {
+.panel-block .panel a {
     float: right;
     margin-right: 10px;
     text-decoration: underline;
 }
-#promotion .panel .uk-grid-divider {
+.panel-block .panel .uk-grid-divider {
     margin: 18px;
     margin-left: 0;
     width: 120px;
 }
-#promotion .panel .info {
+.panel-block .panel .info {
     background: #fff;
     padding: 20px 10px 20px 25px;
 }
-#promotion .panel .info {
+.panel-block .panel .info {
     background: #fff;
     padding: 20px 10px 20px 25px;
 }
-#promotion .panel .info {
+.panel-block .panel .info {
 
 }
 
-#news {
+.news {
     background-color:  #4e1301;
     overflow: hidden;
+    margin-bottom: 20px;
 }
-#news .uk-grid+.uk-grid {
+.news .uk-grid+.uk-grid {
     margin-top: 0 !important;
 }
-#news .block-info .info-text {
+.news .block-info .info-text {
     max-width: 48%;
     float: left;
     padding-right: 20px;
 }
-#news .block-info.even .info-text {
+.news .block-info.even .info-text {
     max-width: 50%;
     float: right;
     padding-left: 20px;
 }
-#news .block-info {
+.news .block-info {
+    min-height: 300px;
     position: relative;
     background: #6b1a01;
     padding: 70px 10px 77px 40px;
 }
-#news .block-info a {
+.news .block-info a {
     float: right;
     font-size: 16px;
     text-decoration: underline;
 }
-#news .block-info a {
+.news .block-info a {
     color:  #fff;
 }
-#news .block-info.even a {
+.news .block-info.even a {
     color:  #212121;
 }
-#news .block-info .date,
-#news .block-info h2,
-#news .block-info p {
+.news .block-info .date,
+.news .block-info h2,
+.news .block-info p {
     color:  #fff;
     font-size: 16px;
     text-transform: uppercase;
 }
-#news .block-info h2 {
+.news-other {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.news .block-info h2 {
     margin: 5px 0;
 }
-#news .block-info p {
+.news .block-info p {
     min-height: 140px;
     max-height: 140px;
     overflow: hidden;;
     margin-top: 0;
     text-transform: lowercase;
 }
-#news .block-info .img {
+.news .block-info .img {
     position: absolute;
     top: 0;
     right: 103%;
     width: 100%;
     text-align: right;
 }
-#news .block-info .img img {
+.news .block-info .img img {
     width: auto;
     max-height: 393px;
 }
-#news .block-info.even {
+.news .block-info.even {
     background: #d7ccc8;
     padding: 70px 40px 77px 10px;
 }
-#news .block-info.even .date,
-#news .block-info.even h2,
-#news .block-info.even p {
+.news .block-info.even .date,
+.news .block-info.even h2,
+.news .block-info.even p {
     color:  #212121;
 }
-#news .block-info.even:after,
-#news .block-info:after {
+.news .block-info.even:after,
+.news .block-info:after,
+.inner .circle-list li:after,
+.checkin-time ul li:after {
     display: block;
     content: '';
     clear: both;
 }
-#news .block-info.even .img {
+.news .block-info.even .img {
     left: 103%;
     text-align: left;
 }
 
-#location {
-    margin: 40px 0;
+.location-block {
+    margin: 20px 0;
 }
-#location .contact-block {
-    /*width: 40%;*/
-    padding: 50px 0 30px 20px;
+.location-block .contact-block {
+    padding-top: 20px;
+    padding-left: 0;
 }
-#location .contact-block ul {
+ul.contacts {
     padding-left: 75px;
     list-style: none;
     color: #212121;
+    font-size: 16px;
     margin: 15px 0;
+    line-height: 22px;
 }
-#location .contact-block li.address-info {
+.contacts li.address-info {
     position: relative;
+    margin-bottom: 20px;
 }
-#location .contact-block li.address-info .city {
+.contacts .contact-info {
+    padding: 0;
+}
+.contact-info li {
+    margin-bottom: 5px;
+}
+.contacts .contact-info .phone-num {
+    font-size: 30px;
+    line-height: 1.3em;
+}
+.strong {
     text-transform: uppercase;
     font-size: 16px;
     font-weight: bold;
 }
-#location .contact-block li.address-info:before {
+.map-icon-block {
+    margin-top: 10px;
+}
+.map-icon-block .map-icon {
+    position: relative;
+    max-width: 165px;
+    margin: 0 auto;
+    padding: 0 2px;
+}
+.map-icon-block .map-icon span:before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 22px;
+    top: 0;
+    left: -35px;
+    background: url('../img/map-sprite.png') no-repeat left center;
+}
+.map-icon-block .map-icon.water span:before {
+    background-position: 0 center;
+}
+.map-icon-block .map-icon.metro span:before {
+    background-position: -30px center;
+}
+.map-icon-block .map-icon.stadium span:before {
+    background-position: -62px center;
+}
+.route {
+    padding: 30px 0;
+}
+.route .contacts {
+    line-height: 24px;
+}
+.route .contacts li.address-info:before {
+    content: '';
+    width: 33px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    left: -45px;
+    background: url('../img/route-sprite.png') no-repeat left center;
+    margin-right: 15px;
+}
+.route .contacts li.address-info.ship:before {
+    background-position: -34px center;
+}
+.route .contacts li.address-info.plane:before {
+    background-position: -68px center;
+}
+li.clock {
+    position: relative;
+}
+li.clock span {
+    padding-left: 25px;
+}
+li.clock span:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background: url('../img/clock-icon.png') no-repeat left center;
+}
+.contacts li.address-info:before {
     content: '';
     width: 50px;
     height: 1px;
@@ -709,22 +981,28 @@ nav .uk-dropdown-navbar {
     background: #ccc;
     margin-right: 15px;
 }
-#location .contact-block ul.phone-num {
-    padding: 0;
-    margin-top: 25px;
-    margin-bottom: 10px;
-}
-#location .contact-block ul.phone-num li {
-    font-size: 30px;
-    line-height: 1.3em;
-}
-#location h2 {
+.location-block h2,
+.route h2,
+.promotion-price h2 {
     color:  #212121;
     font-size: 30px;
+    line-height: 1.2em;
     text-transform: uppercase;
 }
 
-#reviews {
+.tile-inner.text.btn-offset-block {
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: none;
+    text-align: left;
+}
+.tile-inner.text.btn-offset-block .button {
+    margin-top: 40px;
+}
+
+.reviews {
     background: url('../img/reviews.jpg') no-repeat center;
     background-size: cover;
     color: #fff;
@@ -733,16 +1011,16 @@ nav .uk-dropdown-navbar {
     font-size: 16px;
     text-align: left;
 }
-#reviews .review {
+.reviews .review {
     padding: 0 5px;
 }
-#reviews h1 {
+.reviews h1 {
     color:  #fff;
     text-align: center;
     text-transform: uppercase;
     font-size: 30px;
 }
-#reviews .name {
+.reviews .name {
     height: 120px;
     padding-left: 110px;
     padding-top: 32px;
@@ -751,40 +1029,93 @@ nav .uk-dropdown-navbar {
     font-size: 16px;
     color: #fff;
 }
-#reviews .name span {
+.reviews .name span {
     text-transform: uppercase;
 }
-#reviews .name.name-1 {
+.reviews .name.name-1 {
     background: url('../img/reviews-1.png') no-repeat left center;
 }
-#reviews .name.name-2 {
+.reviews .name.name-2 {
     background: url('../img/reviews-2.png') no-repeat left center;
 }
-#reviews .name.name-3 {
+.reviews .name.name-3 {
     background: url('../img/reviews-3.png') no-repeat left center;
 }
 
-#instagram {
+.instagram {
     padding-top: 30px;
     padding-bottom: 57px;
 }
-#instagram h4 {
+.instagram h4 {
     margin-bottom: 0;
     color:  #797979;
     font-size: 24px;
     text-align: center;
 }
-#instagram h2 {
+.instagram h2 {
     color:  #020101;
     font-size: 30px;
     margin-top: 10px;
     margin-bottom: 35px;
     text-align: center;
 }
-#instagram img {
+.instagram img {
     width: 100%;
 }
 
+.uk-pagination>li:nth-child(n+2) {
+    margin-left: 0;
+}
+.uk-pagination>li {
+    border: 1px solid #555;
+    border-left: none;
+}
+.uk-pagination>li.uk-active {
+    border: 1px solid #e25b5c;
+}
+.uk-pagination>li.uk-active + li {
+    border-left: 1px solid #555;
+}
+li + .uk-pagination>li.uk-active {
+    border-right: 1px solid #555;
+}
+.uk-pagination>.uk-active>span {
+    background: #e25b5c;
+}
+.uk-pagination {
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+.uk-breadcrumb>li, .uk-breadcrumb>li>a, .uk-breadcrumb>li>span {
+    font-size: 16px;
+    color: #1b1b1b;
+}
+.uk-breadcrumb>li.uk-active>a,
+.uk-breadcrumb>li.uk-active>span {
+    color: #e25b6c;
+    text-decoration: underline;
+}
+table.uk-table {
+    min-width: 768px;
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+.uk-table thead th {
+    background: #dccdc9;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+.uk-table td, .uk-table th {
+    border: 1px solid #e2e2e2;
+    font-size: 16px;
+    text-align: center;
+}
+.uk-table-striped tbody tr:nth-of-type(odd) {
+    
+}
+.uk-table-striped tbody tr:nth-of-type(even) {
+    background: #fff;
+}
 
 
 
@@ -809,11 +1140,11 @@ footer .copyright {
 
 
 @media screen and (min-width: 1220px) {
-    #paid-services .info {
+    .tile-block .info {
         width: 60%;
     }
 }
-@media screen and (max-width: 1119px) {
+@media screen and (max-width: 1166px) {
     .booking-btn {
         width: 100%;
         margin-top: 10px;
@@ -855,45 +1186,48 @@ footer .copyright {
     .slider .rates {
         display: none;
     }
-
-    #location .container {
-        padding: 0 20px;
-    }
-    #location .contact-block {
+    .location-block .contact-block {
         padding-top: 10px;
     }
-    #reviews .container {
+    .reviews .container {
         padding: 0 20px;
     }
     .booking-form {
         padding: 0 40px;
     }
-    #news .block-info,
-    #news .block-info.even {
-        padding: 30px;
+    .news .block-info,
+    .news .block-info.even {
+        padding: 20px;
     }
-    #news .info-wrapper {
+    .news .info-wrapper {
         left: 0;
         padding-left: 0;
     }
-    #news .block-info .img,
-    #news .block-info.even .img {
+    .news .block-info .img,
+    .news .block-info.even .img {
         position: static;
         text-align: center;
     }
-    #news .block-info .info-text,
-    #news .block-info.even .info-text {
+    .news .block-info .info-text,
+    .news .block-info.even .info-text {
         max-width: 100%;
         margin-top: 30px;
     }
 }
 @media screen and (min-width: 1025px) {
-    #paid-services .tile {
+    .tile-block .tile {
         max-width: 234px;
+    }
+
+    .circle-list {
+        width: 80%;
     }
 }
 @media screen and (max-width: 1024px) {
-    #paid-services .info,
+    header .container {
+        padding: 0;
+    }
+    .tile-block .info,
     .tiles {
         width: 100%;
     }
@@ -903,17 +1237,17 @@ footer .copyright {
         margin-bottom: 25px;
         padding-right: 20px;
     }
-    #prices a.detail {
+    .room-prices a.detail {
         float: none;
         margin-top: 12px;
     }
-    #location .contact-block {
+    .location-block .contact-block {
         padding-left: 0;
     }
-    #location h2 {
+    .location-block h2 {
         font-size: 28px;
     }
-    #paid-services .uk-grid-collapse {
+    .tile-block .uk-grid-collapse {
         margin-left: 0;
     }
 }
@@ -923,16 +1257,43 @@ footer .copyright {
         width: 100% !important;
         margin-top: 40px;
         margin-bottom: 20px;
-        padding: 0 20px;
+        padding-left: 0;
         transform: none;
     }
 }
-@media screen and (max-width: 460px) {
-    .slider {
+
+.slider .uk-slideshow > li > img {
+    min-height: 400px;
+}
+@media screen and (max-width: 479px) {
+    .tile-wrapper .price-label {
         display: none;
+    }
+    .tile-inner.text.btn-offset-block {
+        top: 0;
+        padding: 20px;
+        margin: 0;
     }
 }
 @media screen and (max-width: 767px) {
+    .tile-wrapper {
+        margin-bottom: 20px;
+    }
+    .price-details {
+        padding: 20px 0;
+    }
+    .price-details .container {
+        padding: 0;
+    }
+    .location-block .container {
+        padding: 0;
+    }
+    .map-icon-block .map-icon {
+        margin: 5px auto;
+    }
+    .tile-block .tile-wrapper .tile-wrapper {
+        min-height: 330px;
+    }
     input[type], select, textarea {
         height: 40px !important;
         padding: 8px 6px !important;
@@ -991,30 +1352,34 @@ footer .copyright {
     .uk-navbar-nav {
         vertical-align: middle;
     }
-    #about .inner {
+    .block-offset .inner {
         margin-left: 0;
     }
-    #about .uk-grid-divider {
+    .block-offset .uk-grid-divider {
         width: 100%;
     }
-    #about .inner .text-layer {
+    .block-offset .inner .text-layer {
         padding: 30px 20px;
         padding-top: 40px;
     }
-    #about .inner .img {
+    .block-offset .inner .img {
         width: 100%;
         height: 235px;
     }
-    #about h4 {
+    .block-offset h4 {
         font-size: 18px;
     }
-    #about h2 {
+    .block-offset h2,
+    .location-block h2,
+    .route h2,
+    .room-prices h2,
+    .promotion-price h2 {
         font-size: 26px;
     }
-    .services {
+    .thumb-block {
         padding: 20px 0;
     }
-    .services .thumb {
+    .thumb-block .thumb {
         margin: 20px 0;
     }
     .banner h2 {
@@ -1023,60 +1388,78 @@ footer .copyright {
     .banner h4 {
         font-size: 22px;
     }
-    #prices .room-info {
+    .room-info {
         padding: 10px 20px;
     }
-    #prices .container {
+    .room-prices .container {
         padding: 0;
     }
-    #prices h2 {
+    .room-prices h2 {
         padding-left: 20px;
         margin-top: 30px;
     }
-    #promotion {
+    .panel-block {
         padding-top: 40px;
         padding-bottom: 50px;
     }
-    #promotion .container {
+    .panel-block .container {
         padding: 0 30px;
     }
-    #promotion .panel .uk-grid-divider {
+    .panel-block .panel .uk-grid-divider {
         width: 100%;
     }
-    #promotion .panel a {
+    .panel-block .panel a {
         margin-right: 0;
     }
-    #promotion .panel .info {
+    .panel-block .panel .info {
         padding-left: 20px;
         padding-right: 15px;
     }
-    #location .contact-block ul {
+    .location-block .contact-block ul {
         padding-left: 0;
-    }
-    #location .contact-block,
-    #location .map {
-        text-align: center;
     }
 }
 @media screen and (min-width: 960px) {
-    #promotion .panel {
+    .panel-block .panel {
         max-height: 204px;
     }
-    #location .contact-block {
+    .location-block .contact-block {
         width: 40%;
     }
-    #location .map {
+    .location-block .map {
         width: 60%;
     }
 }
 @media screen and (max-width: 959px) {
+    .checkin-time .block-left {
+        float: none;
+        width: 100%;
+    }
+    .checkin-time .block-left,
+    .checkin-time .block-right {
+        padding: 0 20px;
+    }
+    .location-block .contacts li.address-info:before,
+    li.clock span:before {
+        display: none;
+    }
+    .map-icon-block .map-icon span:before {
+        left: 0;
+    }
+    ul.contacts {
+        padding-left: 0;
+    }
+    .route ul.contacts {
+        padding-left: 40px;
+        padding-right: 20px;
+    }
     .modal-inner form .uk-form-controls {
         margin-left: 0;
     }
     .uk-grid>* {
         padding-left: 0;
     }
-    #top-panel .contacts,
+    .top-panel .contacts,
     ul.social {
         text-align: center;
     }
@@ -1094,11 +1477,11 @@ footer .copyright {
         margin-bottom: 25px;
         position: static;
     }
-    #prices .room-info .price span {
+    .room-info .price span {
         display: block;
         padding-left: 0px;
     }
-    #prices .room-info .price span:last-child {
+    .room-info .price span:last-child {
         margin-left: 0px;
     }
     .booking-form .container  {
@@ -1111,7 +1494,7 @@ footer .copyright {
         max-width: 100%;
         width: 100%;
     }
-    .booking-form button {
+    .booking-form .button {
         width: 100%;
         margin-top: 30px;
     }
@@ -1127,24 +1510,24 @@ footer .copyright {
     .banner .banner-layer {
         width: 70%;
     }
-    #paid-services .container {
+    .tile-block .container {
         padding: 0 20px;
     }
     .tiles {
         padding-right: 0;
     }
-    #location .contact-block {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-    #location h2 {
+    .location-block h2 {
         font-size: 26px;
     }
-    #location .contact-block ul.phone-num li {
+    .location-block .contact-block .phone-num li {
         font-size: 26px;
     }
-    #location .contact-block {
-        padding: 0;
+    .location-block .contact-block {
+        padding: 0 20px;
+    }
+    .location-block .contact-block,
+    .location-block .map {
+        text-align: center;
     }
     footer .copyright {
         font-size: 18px;
